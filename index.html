@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,13 @@
     <link rel="stylesheet" href="./dealzus carasouel.css">
     <script src="./dealzus carasouel.js" defer></script>
 </head>
+
 <body>
+
+    <h3 style="color: red;">convert img to code</h3>
+    <input type="file" name="file" id="file">
+
+    <br>
     <div class="center" id="a">
         <!-- <img src="./IMG1.jpg" alt="" class="move-1">
         <img src="./IMG2.jpg" alt="" class="move-2">
@@ -15,5 +22,26 @@
         <img src="./logo.jpeg" alt="" class="move-4">
         <img src="./IMG1.jpg" alt="" class="move-5"> -->
     </div>
+    <!-- <iframe src="https://www.youtube.com/embed/JP65a-9Jt10" frameborder="0"></iframe> -->
+
+
+    <div class="scroll-div-container" style="overflow-x: scroll;">
+        <!-- <div class="swiper-slide" #xx (click)="x()" (onscroll)="x()" *ngFor="let item of list"> <img [src]="item.image" alt="" style="width: 400px; height: 100px;"></div> -->
+        <div class="scroll-view" id="c" onclick="x()">
+            <img src="./1.jpg" alt="" style="width: 400px; height: 300px;">
+            <img src="./2.jpg" alt="" style="width: 400px; height: 300px;">
+            <img src="./3.jpg" alt="" style="width: 400px; height: 300px;">
+            <img src="./4.jpg" alt="" style="width: 400px; height: 300px;">
+            <img src="./5.jpg" alt="" style="width: 400px; height: 300px;">
+            <img src="./6.png" alt="" style="width: 400px; height: 300px;">
+        </div>
+        <div style="display: flex ; justify-content: space-around;">
+            <button class="left" onclick="x()">left</button>
+            <button class="right" onclick="y()" style="float: right;">right</button>
+        </div>
+
+
+    </div>
 </body>
+
 </html>

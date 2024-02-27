@@ -1,64 +1,70 @@
-*{
+* {
     transition: .5s;
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     position: relative;
     margin-left: 2.5%;
 }
 
-img{
+img {
     height: 320px;
     width: calc(120% / 5);
     position: absolute;
-    z-index: 2 ;
+    z-index: 2;
     margin-left: 5px;
     box-shadow: 0px 0px 15px rgb(40, 40, 40);
     top: 30 !important;
+    border-radius: 5px;
 }
 
-.move-1{
+.move-1 {
     animation-name: moveLeft;
-    animation-duration: .5s;
-    animation-timing-function: linear;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     left: calc(18% * 0);
     top: 15px;
 }
-.move-2{
+
+.move-2 {
     left: calc(18% * 1);
     animation-name: moveLeft1;
-    animation-duration: .5s;
-    animation-timing-function: linear;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     top: 45px;
 }
-.move-3{
+
+.move-3 {
     left: calc(18% * 2);
     animation-name: moveLeft2;
-    animation-duration: .5s;
-    animation-timing-function: linear;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     top: 65px;
 }
-.move-4{
+
+.move-4 {
     left: calc(18% * 3);
     animation-name: moveLeft3;
-    animation-duration: .5s;
-    animation-timing-function: linear;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     top: 45px;
 }
-.move-5{
+
+.move-5 {
     left: calc(18% * 4);
     animation-name: moveLeft4;
-    animation-duration: .5s;
-    animation-timing-function: linear;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     top: 0px;
@@ -67,13 +73,14 @@ img{
 
 /* the second image */
 @keyframes moveLeft {
-    form{
+    form {
         left: 0;
         z-index: 2;
         opacity: 1;
         top: 15px;
     }
-    to{
+
+    to {
         left: calc(18% * 1);
         z-index: 3;
         opacity: .75;
@@ -81,46 +88,52 @@ img{
     }
 }
 
-/* the img in center */  /* the third img */
+/* the img in center */
+/* the third img */
 @keyframes moveLeft1 {
-    form{
+    form {
         left: calc(18% * 1);
         z-index: 3;
         opacity: 1;
         top: 45px;
     }
-    to{  
+
+    to {
         left: calc(18% * 2);
         opacity: 1;
         z-index: 5;
         opacity: 1;
         top: 65px;
-     }
+    }
 }
+
 /* the fourth image */
 @keyframes moveLeft2 {
-    form{
+    form {
         left: calc(18% * 2);
         z-index: 4;
         opacity: 1;
         top: 65px;
     }
-    to{ 
+
+    to {
         left: calc(18% * 3);
         z-index: 3;
         opacity: .75;
         top: 45px;
     }
 }
+
 /* the fifth image */
 @keyframes moveLeft3 {
-    form{
+    form {
         left: calc(18% * 3);
         z-index: 3;
         opacity: 1;
         top: 45px;
     }
-    to{  
+
+    to {
         left: calc(18% * 4);
         opacity: 1;
         z-index: 2;
@@ -129,20 +142,62 @@ img{
         top: 15px;
     }
 }
+
 /* the frist image */
 @keyframes moveLeft4 {
-    form{
+    0% {
         left: calc(18% * 4);
-        opacity: 0;
+        opacity: .5;
         z-index: 2;
-        opacity: 1;
         top: 0px;
     }
-    to{
+
+    30% {
+        left: calc(18% * 4.5);
+        opacity: 0;
+        z-index: 2;
+        top: 0px;
+    }
+
+    50% {
+        left: calc(-18% * 4);
+        opacity: 0;
+        z-index: 2;
+        top: 0px;
+    }
+
+    100% {
         left: 0;
         z-index: 1;
         opacity: .5;
         z-index: -1;
         top: 15px;
     }
+}
+
+*/ .scroll-div-container {
+    overflow-x: scroll !important;
+    position: relative;
+
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-view {
+    position: relative !important;
+    display: inline-flex !important;
+    overflow-x: scroll !important;
+}
+
+.scroll-view img {
+    position: relative !important;
+    margin-top: 500px;
+}
+
+.left,
+.right {
+    padding: 5px 10px;
+    margin: 10px;
 }
