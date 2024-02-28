@@ -6,11 +6,11 @@
 document.getElementById('file').addEventListener('change', imgToCode, false);
 
 function imgToCode(ele) {
-    // let loader = new FileReader();
-    // loader.readAsDataURL(ele.target.files[0])
-    // loader.onload = (event) => {
-    //     console.log(event.target?.result);  // show the photos before uploading
-    // }
+    let loader = new FileReader();
+    loader.readAsDataURL(ele.target.files[0])
+    loader.onload = (event) => {
+        console.log(event.target?.result);  // show the photos before uploading
+    }
 }
 
 
