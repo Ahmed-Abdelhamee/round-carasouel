@@ -248,30 +248,38 @@
 
 @keyframes carasouel_from_right_to_left {
     0%{
-        left: 100%;
+        left: 70%;
+        opacity: 0;
     }
-    8.5%{
+    6.5%{
         left: 0%;
+        opacity: 1;
     }
-    83%{
+    87%{
         left: 0%;
+        opacity: 1;
     }
     100%{
         left: -100%;
+        opacity: 0.2;
     }
 }
 
 @keyframes carasouel_from_left_to_right {
     0%{
-        left: -100%;
+        left: -70%;
+        opacity: 0;
     }
-    8.5%{
+    6.5%{
         left: 0%;
+        opacity: 1;
     }
     83%{
         left: 0%;
+        opacity: 1;
     }
     100%{
         left: 100%;
+        opacity: 0.2;
     }
 }

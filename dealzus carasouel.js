@@ -115,3 +115,5 @@ function addActiveFromLTR() {
         cararsouelImages[setActive].classList.add("active-from-left-to-right")
     }, 8000);
 }
+
+// addActiveFromLTR()
