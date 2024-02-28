@@ -1,7 +1,22 @@
-// let images=document.querySelectorAll("#a img");
+
+
+
+// <!-- ---------------------------------------- fristly => Img To Code ---------------------------------->
+
+document.getElementById('file').addEventListener('change', imgToCode, false);
+
+function imgToCode(ele) {
+    // let loader = new FileReader();
+    // loader.readAsDataURL(ele.target.files[0])
+    // loader.onload = (event) => {
+    //     console.log(event.target?.result);  // show the photos before uploading
+    // }
+}
+
+
+// <!-- ---------------------------------------- secondly => the moving list view ---------------------------------->
 
 let images = ["./IMG2.jpg", "./IMG1.jpg", "./logo.jpeg", "./IMG4.jpg", "./IMG3.jpg"]
-
 
 function movement() {
     // empty()
@@ -42,7 +57,7 @@ function empty() {
 // console.log(confirm("hello"))
 
 
-// <!-- ---------------------------------------- scroll list view ---------------------------------->
+// <!-- ---------------------------------------- thridly  =>  scroll list view ---------------------------------->
 let i = 1;
 function x() {
     let inter = window.setInterval(() => {
@@ -61,20 +76,9 @@ function y() {
     }, 10);
 }
 
-document.getElementById('file').addEventListener('change', imgToCode, false);
-
-function imgToCode(ele) {
-    let loader = new FileReader();
-    loader.readAsDataURL(ele.target.files[0])
-    loader.onload = (event) => {
-        console.log(event.target?.result);  // show the photos before uploading
-    }
-}
 
 
-
-
-// <!---------------------------------------- cararsouel  code ------------------------------------>
+// <!---------------------------------------- fourth =>  cararsouel  code ------------------------------------>
 setActive = -1;
 let intRTL;
 let intLTR;
