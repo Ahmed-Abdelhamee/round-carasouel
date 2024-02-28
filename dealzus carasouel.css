@@ -9,6 +9,8 @@
     margin-left: 2.5%;
 }
 
+/* ----------------------------------- moved images ------------------------------ */
+
 #a img,
 .scroll-view img {
     height: 320px;
@@ -177,7 +179,8 @@
 }
 
 
-/* ---------------------------------------- scroll list view ---------------------------------- */
+/* --------------------------------- scroll owl-carasouel-list view ------------------------ */
+
 */ .scroll-div-container {
     overflow-x: scroll !important;
     position: relative;
@@ -303,5 +306,20 @@
     100% {
         left: 100%;
         opacity: 0.2;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    #a img {
+        height: 150px !important;
+        margin-left: 3px !important;
     }
 }
