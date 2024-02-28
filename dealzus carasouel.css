@@ -207,17 +207,21 @@
 
 
 /* ---------------------------------------- carasouel view ---------------------------------- */
-.carasouel{
-    width: 1000px;
-    margin-left: 5%;
+.container-view {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.carasouel {
+    width: 100%;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid lightgray;
-    margin-bottom: 100px;
     position: relative;
-    height: 300px;
+    height: 350px;
 }
-.carasouel img{
+
+.carasouel img {
     height: 100%;
     width: 100% !important;
     position: absolute;
@@ -226,7 +230,19 @@
     display: none;
     border-radius: 10px;
 }
-.active-from-right-to-left{
+
+.container-view button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.container-view .btn-rtl {
+    left: auto;
+    right: 0;
+}
+
+.active-from-right-to-left {
     display: block !important;
     animation-name: carasouel_from_right_to_left;
     animation-duration: 8s;
@@ -236,7 +252,7 @@
     top: 65px;
 }
 
-.active-from-left-to-right{
+.active-from-left-to-right {
     display: block !important;
     animation-name: carasouel_from_left_to_right;
     animation-duration: 8s;
@@ -247,38 +263,44 @@
 }
 
 @keyframes carasouel_from_right_to_left {
-    0%{
+    0% {
         left: 70%;
         opacity: 0;
     }
-    6.5%{
+
+    6.5% {
         left: 0%;
         opacity: 1;
     }
-    87%{
+
+    90% {
         left: 0%;
         opacity: 1;
     }
-    100%{
+
+    100% {
         left: -100%;
         opacity: 0.2;
     }
 }
 
 @keyframes carasouel_from_left_to_right {
-    0%{
+    0% {
         left: -70%;
         opacity: 0;
     }
-    6.5%{
+
+    6.5% {
         left: 0%;
         opacity: 1;
     }
-    83%{
+
+    90% {
         left: 0%;
         opacity: 1;
     }
-    100%{
+
+    100% {
         left: 100%;
         opacity: 0.2;
     }

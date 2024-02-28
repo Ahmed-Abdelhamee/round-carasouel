@@ -75,8 +75,14 @@ function imgToCode(ele) {
 
 
 // <!---------------------------------------- cararsouel  code ------------------------------------>
-
+setActive = -1;
+let intRTL;
+let intLTR;
 cararsouelImages = document.querySelectorAll(".carasouel img");
+carasouelNum = cararsouelImages.length;
+
+addActiveFromRTL();
+// addActiveFromLTR()
 
 function removeActive() {
     cararsouelImages.forEach((ele) => {
@@ -85,35 +91,37 @@ function removeActive() {
     })
 }
 
-carasouelNum = cararsouelImages.length;
-
-setActive = 0;
-
-let intRTL;
-let intLTR;
-
 function addActiveFromRTL() {
     clearInterval(intRTL)
+    clearInterval(intLTR)
+    removeActive();
+    setActive++;
+    if (setActive === cararsouelImages.length)
+        setActive = 0;
+    cararsouelImages[setActive].classList.add("active-from-right-to-left")
     intRTL = setInterval(() => {
-        removeActive();
-        setActive++;
-        if (setActive === cararsouelImages.length)
-            setActive = 0;
-        cararsouelImages[setActive].classList.add("active-from-right-to-left")
+        addActiveFromRTL()
     }, 8000);
 }
-
-addActiveFromRTL();
 
 function addActiveFromLTR() {
     clearInterval(intRTL)
+    clearInterval(intLTR)
+    removeActive();
+    setActive--;
+    if (setActive < 0)
+        setActive = cararsouelImages.length - 1;
+    cararsouelImages[setActive].classList.add("active-from-left-to-right")
     intLTR = setInterval(() => {
-        removeActive();
-        setActive++;
-        if (setActive === cararsouelImages.length)
-            setActive = 0;
-        cararsouelImages[setActive].classList.add("active-from-left-to-right")
+        addActiveFromLTR();
     }, 8000);
 }
 
-// addActiveFromLTR()
+function carasouelDirection(direction) {
+    if (direction == "rtl") {
+        addActiveFromRTL();
+    }
+    else {
+        addActiveFromLTR()
+    }
+}
